@@ -1,0 +1,125 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 40px 30px;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #aaa;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+/* Кнопки сцен */
+.scenes {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.scene-btn {
+    padding: 14px 22px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scene-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.scene-btn.active {
+    background: rgba(99, 102, 241, 0.4);
+    border-color: #6366f1;
+}
+
+/* Кнопка Play */
+.controls {
+    margin-bottom: 30px;
+}
+
+.play-btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #6366f1;
+    background: rgba(99, 102, 241, 0.2);
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 24px;
+}
+
+.play-btn:hover {
+    background: rgba(99, 102, 241, 0.4);
+    transform: scale(1.05);
+}
+
+.play-btn.playing {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: #ef4444;
+}
+
+/* Громкость */
+.volume-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#volumeSlider {
+    width: 200px;
+    accent-color: #6366f1;
+}
+
+/* Таймер */
+.timer {
+    margin-top: 20px;
+}
+
+#timerDisplay {
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-variant-numeric: tabular-nums;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 480px) {
+    h1 { font-size: 1.5rem; }
+    .scene-btn { padding: 10px 16px; font-size: 0.9rem; }
+    .play-btn { width: 100px; height: 100px; font-size: 1rem; }
+    #timerDisplay { font-size: 2rem; }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Ambience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎧 Social Ambience</h1>
+        <p class="subtitle">Фоновые звуки для комфортной работы</p>
+
+        <!-- Выбор сцены -->
+        <div class="scenes">
+            <button class="scene-btn active" data-scene="cafe">
+                ☕ Кофейня
+            </button>
+            <button class="scene-btn" data-scene="office">
+                🏢 Офис
+            </button>
+            <button class="scene-btn" data-scene="library">
+                📚 Библиотека
+            </button>
+        </div>
+
+        <!-- Управление воспроизведением -->
+        <div class="controls">
+            <button id="playBtn" class="play-btn">▶ Play</button>
+
+            <div class="volume-control">
+                <span>🔈</span>
+                <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                <span>🔊</span>
+            </div>
+        </div>
+
+        <!-- Таймер (простой) -->
+        <div class="timer">
+            <span id="timerDisplay">00:00:00</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
